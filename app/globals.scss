@@ -1,5 +1,13 @@
+:root {
+  --bg: #d3b786;
+  --text-main: #e9e9e9;
+  --text-secondary: #74644a;
+  --accent: #7d4646;
+
+}
+
 body {
-  background-color: #d3b786;
+  background-color: var(--bg);
 }
 
 /* CSS RESET */

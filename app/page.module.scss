@@ -15,12 +15,12 @@
     font-weight: 900;
     font-size: 6rem;
     // font-size: 128px;
-    color: #7D4646;
+    color: var(--accent);
     line-height: 110%;
   }
 
   h3 {
-    color: #74644A;
+    color: var(--text-secondary);
     font-size: 2rem;
     font-weight: 565;
     line-height: 110%;

@@ -1,0 +1,37 @@
+.bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    min-height: 100dvh;
+    z-index: -1;
+    background-image: url('/assets/images/checker.webp');
+    background-size: 25%;
+    background-repeat: repeat;
+    background-color: #d3b786;
+    background-blend-mode: soft-light;
+
+    @media screen and (max-width: 768px) {
+        background-size: 100%;
+
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+
+
+
+}

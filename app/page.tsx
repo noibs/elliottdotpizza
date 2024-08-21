@@ -16,7 +16,7 @@ export default function Home() {
         Pizza
       </h1>
       <Button
-        link="#"
+        link="/menu"
         text="Check Menu"
         icon="fa-solid fa-fork-knife"
         color="#7D4646"

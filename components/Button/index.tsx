@@ -19,6 +19,12 @@ export default function Button({
       <button className={styles.button} style={{ backgroundColor: color }}>
         {text}
         {icon && <i className={icon}></i>}
+        <div className={styles.pizzaContainer}>
+          <i className={`fa-regular fa-pizza-slice ${styles.pizza}`}></i>
+          <i className={`fa-regular fa-pizza-slice ${styles.pizza}`}></i>
+          <i className={`fa-regular fa-pizza-slice ${styles.pizza}`}></i>
+          <i className={`fa-regular fa-pizza-slice ${styles.pizza}`}></i>
+        </div>
       </button>
     </Link>
   );
