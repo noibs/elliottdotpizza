@@ -11,6 +11,13 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 /* CSS RESET */
 
 html {

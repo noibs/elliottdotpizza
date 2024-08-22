@@ -17,6 +17,10 @@
     }
 }
 
+.title {
+    font-family: var(--font-neco);
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -30,8 +34,10 @@
         font-weight: 700;
         color: var(--accent);
     }
+}
 
-
-
-
+.boards {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }

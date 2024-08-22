@@ -1,16 +1,12 @@
 import styles from './page.module.scss';
-import localFont from 'next/font/local';
 import Button from '@/components/Button';
 
-const neco = localFont({
-  src: 'fonts/Neco-Variable.woff2',
-  display: 'swap',
-});
 export default function Home() {
   return (
-    <main className={`${styles.main} ${neco.className}`}>
+    <main className={`${styles.main}`}>
       <h3>Welcome To</h3>
       <h1>
+        
         Elliott&rsquo;s
         <br />
         Pizza

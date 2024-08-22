@@ -3,8 +3,15 @@ import { Inter } from 'next/font/google';
 import './globals.scss';
 import Script from 'next/script';
 import Nav from '@/components/Nav';
+import localFont from 'next/font/local';
 
 const inter = Inter({ subsets: ['latin'] });
+
+const neco = localFont({
+  src: 'fonts/Neco-Variable.woff2',
+  display: 'swap',
+  variable: '--font-neco',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,9 +31,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${neco.variable}`}>
       <Nav />
-        {children}</body>
+        {children}
+        </body>
     </html>
   );
 }

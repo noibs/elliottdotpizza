@@ -29,6 +29,7 @@
         .navItem {
             padding: var(--padding);
             border-radius: calc(var(--b-radius) - 1rem);
+            cursor: pointer;
             transition: all 0.3s ease;
 
             .navLink {
@@ -40,7 +41,7 @@
             }
 
             &.active {
-                background-color: darken(#7d4646, 10%);
+                background-color: darken(#7d4646, 5%);
 
                 .navLink {
                     font-weight: 700;
