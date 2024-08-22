@@ -1,5 +1,9 @@
 .main {
     //background-image: url('/assets/images/wood.jpg');
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: #d3b786;
     background-size: cover;
     padding: 3rem 4rem;
