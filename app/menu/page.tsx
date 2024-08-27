@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './menu.module.scss';
-import Board from '@/components/Board';
+import React from "react";
+import styles from "./menu.module.scss";
+import Card from "@/components/Card";
 
 export default function Menu() {
   return (
@@ -9,9 +9,8 @@ export default function Menu() {
         <main className={styles.main}>
           <h1 className={styles.title}>Menu</h1>
           <div className={styles.boards}>
-            <Board pizza="1" />
+            <Card pizza="pepperoni" />
           </div>
-
         </main>
       </div>
     </>

@@ -1,0 +1,25 @@
+{
+    "pepperoni": {
+        "num": 1,
+        "name": "Pepperoni Pizza",
+        "desc": "Our classic pepperoni pizza features a perfect blend of zesty tomato sauce, melted mozzarella cheese, and crispy pepperoni slices on a hand-tossed crust.",
+        "allergens": "Wheat, Dairy. Nutritional info available upon request.",
+        "img": "/assets/images/pizza/pepperoni.webp",
+        "price": {
+            "small": 10.99,
+            "medium": 12.99,
+            "large": 14.99
+        }
+    },
+    "pizza": {
+        "name": "Pepperoni Pizza",
+        "desc": "Our classic pepperoni pizza features a perfect blend of zesty tomato sauce, melted mozzarella cheese, and crispy pepperoni slices on a hand-tossed crust.",
+        "allergens": "Wheat, Dairy. Nutritional info available upon request.",
+        "img": "/assets/images/pizza/pepperoni.webp",
+        "price": {
+            "small": 10.99,
+            "medium": 12.99,
+            "large": 14.99
+        }
+    }
+}
