@@ -10,6 +10,7 @@ export default function Menu() {
           <h1 className={styles.title}>Menu</h1>
           <div className={styles.boards}>
             <Card pizza="pepperoni" />
+            <Card pizza="margherita" />
           </div>
         </main>
       </div>

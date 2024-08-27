@@ -1,4 +1,5 @@
 "use client";
+import { transform } from "next/dist/build/swc";
 import styles from "./board.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -17,7 +18,8 @@ interface Pizza {
   };
 }
 
-const Card = ({ pizza }: { pizza: string }) => {
+const Card = ({ pizza }: { pizza: string; containerStyles?: string }) => {
+  const [rotation, setRotation] = useState(0);
   const [size, setSize] = useState("medium");
   const [selectedPizza, setSelectedPizza] = useState<Pizza>({
     num: 0,
@@ -33,6 +35,8 @@ const Card = ({ pizza }: { pizza: string }) => {
   });
 
   useEffect(() => {
+    setRotation(Math.floor(Math.random() * 5) - 2);
+
     fetch("./assets/menu.json")
       .then((response) => response.json())
       .then((data) => {
@@ -44,17 +48,23 @@ const Card = ({ pizza }: { pizza: string }) => {
 
   const handleSize = (size: string) => {
     setSize(size);
-    const dropdownContent = document.getElementById("dropdownContent");
-    if (dropdownContent) dropdownContent.style.display = "none";
+    const dropdownContents = document.querySelectorAll("#dropdownContent");
+    Array.from(dropdownContents).forEach((dropdownContent) => {
+      (dropdownContent as HTMLElement).style.display = "none";
+    });
     setTimeout(() => {
-      if (dropdownContent) dropdownContent.attributes.removeNamedItem("style");
+      Array.from(dropdownContents).forEach((dropdownContent) => {
+        (dropdownContent as HTMLElement).removeAttribute("style");
+      });
     }, 1);
   };
 
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main}`} style={{ rotate: `${rotation}deg` }}>
       <div className={styles.head}>
-        <h1>{selectedPizza.name}</h1>
+        <h2>
+          {selectedPizza.num}. {selectedPizza.name}
+        </h2>
       </div>
       <div className={styles.mid}>
         <div className={styles.info}>
@@ -103,15 +113,21 @@ const Card = ({ pizza }: { pizza: string }) => {
               </div>
             </div>
           </div>
+          <button className={styles.addBtn}>Add to Cart</button>
         </div>
         <Image
           src={selectedPizza.img}
           alt={`Photo of ${selectedPizza.name}`}
-          width={200}
-          height={200}
+          width={400}
+          height={400}
         />
       </div>
-      <div className={styles.footer}></div>
+      <div className={styles.footer}>
+        <p>
+          <span className={styles.bold}>Allergens:</span>{" "}
+          {selectedPizza.allergens}
+        </p>
+      </div>
     </main>
   );
 };
