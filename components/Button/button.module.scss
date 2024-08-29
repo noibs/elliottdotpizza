@@ -15,6 +15,7 @@
     transition: all 0.1s;
     cursor: pointer;
     border: none;
+    overflow: hidden;
 
     &:hover {
         scale: .95
@@ -33,29 +34,47 @@
     mix-blend-mode: soft-light;
     transition: all 0.2s;
     opacity: 0;
-    color: #dcc9ab
+    color: #dcc9ab &
+}
+
+.pizza:nth-child(1) {
+    transform: translate3d(-2rem, 4rem, 0) rotate(0) scale(2);
+}
+
+.pizza:nth-child(2) {
+    transform: translate3d(-4rem, -3.75rem, 0) rotate(0) scale(2);
+}
+
+.pizza:nth-child(3) {
+    transform: translate3d(6rem, -3.5rem, 0) rotate(0) scale(2);
+}
+
+.pizza:nth-child(4) {
+    transform: translate3d(1.5rem, 3.75rem, 0) rotate(0) scale(2);
 }
 
 .button:hover .pizzaContainer {
 
 
     .pizza {
-        opacity: 0.5;
+        opacity: 0.3;
     }
 
     .pizza:nth-child(1) {
-        transform: translate3d(-2rem, 4rem, 0) rotate(-20deg) scale(2);
+        transform: translate3d(-4rem, 0rem, 0) rotate(-20deg) scale(1.5);
     }
 
     .pizza:nth-child(2) {
-        transform: translate3d(-4rem, -3.75rem, 0) rotate(90deg) scale(2);
+        transform: translate3d(-2rem, -0.5rem, 0) rotate(90deg) scale(1.5);
     }
 
     .pizza:nth-child(3) {
-        transform: translate3d(6rem, -3.5rem, 0) rotate(-95deg) scale(2);
+        transform: translate3d(5rem, 0rem, 0) rotate(-95deg) scale(1.5);
     }
 
     .pizza:nth-child(4) {
-        transform: translate3d(1.5rem, 3.75rem, 0) rotate(-80deg) scale(2);
+        transform: translate3d(0rem, 0rem, 0) rotate(-80deg) scale(1.5);
     }
+
+
 }

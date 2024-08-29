@@ -22,5 +22,41 @@
             "medium": 11.99,
             "large": 13.99
         }
+    },
+    "vegetarian": {
+        "num": 3,
+        "name": "Vegetarian Supreme",
+        "desc": "A garden-fresh delight featuring a medley of colorful bell peppers, red onions, mushrooms, black olives, and juicy tomatoes, all nestled on a bed of melted mozzarella and our signature tomato sauce.",
+        "allergens": "Wheat, Dairy. Nutritional info available upon request.",
+        "img": "/assets/images/pizza/vegetarian.webp",
+        "price": {
+            "small": 11.99,
+            "medium": 13.99,
+            "large": 15.99
+        }
+    },
+    "bbq_chicken": {
+        "num": 4,
+        "name": "BBQ Chicken",
+        "desc": "Savor the bold flavors of our BBQ Chicken pizza, topped with tender grilled chicken, and onions, all drizzled with tangy barbecue sauce and melted mozzarella cheese.",
+        "allergens": "Wheat, Dairy, Soy. Nutritional info available upon request.",
+        "img": "/assets/images/pizza/bbq_chicken.webp",
+        "price": {
+            "small": 12.99,
+            "medium": 14.99,
+            "large": 16.99
+        }
+    },
+    "meat_lovers": {
+        "num": 5,
+        "name": "Meat Lovers",
+        "desc": "A carnivore's dream come true, featuring a hearty combination of pepperoni, Italian sausage, bacon, ham, and ground beef, all generously layered over melted mozzarella and our robust tomato sauce.",
+        "allergens": "Wheat, Dairy, Pork. Nutritional info available upon request.",
+        "img": "/assets/images/pizza/meat_lovers.webp",
+        "price": {
+            "small": 13.99,
+            "medium": 15.99,
+            "large": 17.99
+        }
     }
 }

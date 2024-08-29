@@ -20,6 +20,7 @@ interface Pizza {
 
 const Card = ({ pizza }: { pizza: string; containerStyles?: string }) => {
   const [rotation, setRotation] = useState(0);
+  const [loading, setLoading] = useState(true);
   const [size, setSize] = useState("medium");
   const [selectedPizza, setSelectedPizza] = useState<Pizza>({
     num: 0,
@@ -35,7 +36,7 @@ const Card = ({ pizza }: { pizza: string; containerStyles?: string }) => {
   });
 
   useEffect(() => {
-    setRotation(Math.floor(Math.random() * 5) - 2);
+    setRotation(Math.floor(Math.random() * 5) - 2.5);
 
     fetch("./assets/menu.json")
       .then((response) => response.json())
@@ -117,7 +118,7 @@ const Card = ({ pizza }: { pizza: string; containerStyles?: string }) => {
         </div>
         <Image
           src={selectedPizza.img}
-          alt={`Photo of ${selectedPizza.name}`}
+          alt={`Photo of a ${selectedPizza.name} pizza`}
           width={400}
           height={400}
         />
