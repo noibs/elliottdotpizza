@@ -6,9 +6,9 @@ const Footer = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Elliott's Pizza</h2>
+          <h2 className={styles.cardTitle}>Elliott&rsquo;s Pizza</h2>
           <p className={styles.cardText}>
-            123 Pizza St.
+            <i className="fa-regular fa-location-dot" /> 123 Pizza St.
             <br />
             Pizzaville, PZ 12345
           </p>
@@ -26,10 +26,20 @@ const Footer = () => {
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>Contact</h2>
           <p className={styles.cardText}>
-            Phone: 123-456-7890
+            <i className="fa-regular fa-phone" />{" "}
+            <a href="tel:123-456-7890">123-456-7890</a>
             <br />
-            Email: info@elliotts.pizza
+            <i className="fa-regular fa-envelope" />{" "}
+            <a href="mailto:info@elliotts.pizza">info@elliotts.pizza</a>
             <br />
+          </p>
+        </div>
+      </div>
+      <div className={styles.copyright}>
+        <div className={styles.line}></div>
+        <div className={styles.btmThing}>
+          <p className={styles.copy}>
+            &copy; 2024 Elliott&rsquo;s Pizza. All rights reserved.
           </p>
           <div className={styles.icons}>
             <i className="fa-brands fa-facebook-f"></i>
@@ -37,12 +47,6 @@ const Footer = () => {
             <i className="fa-brands fa-twitter"></i>
           </div>
         </div>
-      </div>
-      <div className={styles.copyright}>
-        <div className={styles.line}></div>
-        <p className={styles.copy}>
-          &copy; 2024 Elliott's Pizza. All rights reserved.
-        </p>
       </div>
     </main>
   );

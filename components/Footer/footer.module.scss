@@ -1,7 +1,6 @@
 .main {
     background-color: var(--accent);
-    color: var(--text-main);
-    margin-top: 2rem;
+    color: var(--text-lb);
     padding: 3rem;
 }
 
@@ -11,13 +10,7 @@
     grid-area: 5rem;
 }
 
-.card:nth-child(2) {
-    text-align: center;
-}
 
-.card:nth-child(3) {
-    text-align: right;
-}
 
 .cardTitle {
     font-size: 1.5rem;
@@ -25,16 +18,26 @@
     font-family: var(--font-neco);
 }
 
+.card a {
+    color: var(--text-lb);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .icons {
     display: flex;
     justify-content: flex-end;
-    margin-top: 1rem;
     gap: 1rem;
     font-size: 2rem;
+
+    i {
+        cursor: pointer;
+    }
 }
 
 .copyright {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -42,7 +45,13 @@
     .line {
         width: 100%;
         height: 1px;
-        background-color: var(--text-main);
-        margin: 1rem 0;
+        background-color: var(--text-lb);
+        margin: 2rem 0;
+    }
+
+    .btmThing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }

@@ -1,3 +1,24 @@
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+}
+
+.title {
+    font-family: var(--font-neco);
+    color: var(--accent);
+    font-weight: 900;
+    transition: all 0.2 ease;
+
+    &:hover {
+        color: darken($color: #7d4646, $amount: 10);
+        cursor: pointer;
+    }
+}
+
 .nav {
     --b-radius: 2rem;
     --padding: 0.5rem 1rem;
@@ -6,9 +27,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--accent);
-    position: fixed;
     padding: var(--padding);
-    margin: 1rem;
     border-radius: var(--b-radius);
     top: 0;
     right: 0;
@@ -25,6 +44,13 @@
 
 
 
+        .navLink {
+            text-decoration: none;
+            transition: font-weight 0.1s linear;
+            color: var(--text-main);
+            font-size: 1rem;
+            font-weight: 600;
+        }
 
         .navItem {
             padding: var(--padding);
@@ -32,20 +58,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
 
-            .navLink {
-                text-decoration: none;
-                transition: font-weight 0.1s linear;
-                color: var(--text-main);
-                font-size: 1rem;
-                font-weight: 600;
-            }
+
 
             &.active {
                 background-color: darken(#7d4646, 5%);
 
-                .navLink {
-                    font-weight: 700;
-                }
             }
 
             &:hover {

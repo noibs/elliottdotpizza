@@ -1,0 +1,39 @@
+.main {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url('/assets/images/checker.webp');
+    background-size: 25%;
+    background-repeat: repeat;
+    background-color: #d3b786;
+    background-blend-mode: soft-light;
+}
+
+.title {
+    font-family: var(--font-neco);
+    font-weight: 650;
+    color: var(--accent)
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    color: #5f5f5f;
+
+    a {
+        all: unset;
+        cursor: pointer;
+        color: var(--accent);
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

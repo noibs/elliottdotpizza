@@ -1,5 +1,4 @@
 "use client";
-import { transform } from "next/dist/build/swc";
 import styles from "./board.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -43,9 +42,8 @@ const Card = ({ pizza }: { pizza: string; containerStyles?: string }) => {
       .then((data) => {
         const pizzaData = data[pizza];
         setSelectedPizza(pizzaData);
-        console.log(pizzaData);
       });
-  }, []);
+  }, [pizza]);
 
   const handleSize = (size: string) => {
     setSize(size);
